@@ -9,18 +9,40 @@ class UserController extends MY_Controller {
         $this->common->check_adminlogin();
 
 	}
-    //show about us
-    public function user_transaction_list()
+
+    public function user_list()
     {
         // echo 1;die;
-        $data['title'] = 'User Transaction List';
+        $data['title'] = 'User List';
         
       
-		$data['userTransactionList'] = $this->CommonModel->userTransactionList();
+		$data['userList'] = $this->CommonModel->selectResultDataByConditionAndFieldName(array('users.account_id !=' =>  ""),'users','users.id');
+
+        $this->loadAdminView('admin/user_list',$data);
+    }
+
+
+    public function user_token_list()
+    {
+        // echo 1;die;
+        $data['title'] = 'User List';
         
-// print_r($data['userTransactionList']);die;
+      
+        $data['userList'] = $this->CommonModel->selectResultDataByConditionAndFieldName(array('users.grol_token !=' =>  ""),'users','users.id');
+
         $this->loadAdminView('admin/user_list',$data);
     }
     
+    
+    public function transaction_list()
+    {
+        // echo 1;die;
+        $data['title'] = 'Transaction List';
+        
+      
+        $data['transactionList'] = $this->CommonModel->userTransactionList();
+
+        $this->loadAdminView('admin/transaction_list',$data);
+    }
      
 }

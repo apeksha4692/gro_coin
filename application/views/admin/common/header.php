@@ -82,7 +82,7 @@
     <!-- Navbar-->
     <header class="app-header">
         <a class="app-header__logo" href="<?php echo site_url('admin/dashboard');?>">
-            BGRO LOYALTY (GROL)
+            GRO LOYALTY
              <!-- <img src="<?php echo base_url(); ?>uploads/logo_1.jpeg" alt="logo" width="70px">  -->
         </a>
         <a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
@@ -157,7 +157,7 @@
          $record_num2 = $this->uri->segment($last-2);
          ?>
 
-      <li><a class="app-menu__item" href="https://rinkeby.etherscan.io/address/0xbeac042e394a9e073e6837ae36ae8e4f142b5f64" target="_blank"> <span class="app-menu__label">View Etherscan</span></a></li>
+      <li><a class="app-menu__item" href="https://testnet.bscscan.com/address/0xF884ef0b1cF9f4Ff7a03c1d3Cc77b3f05E65aEc8" target="_blank"> <span class="app-menu__label">View BSCscan</span></a></li>
 
       <li><a <?php if($record_num=='dashboard'){ ?>class="app-menu__item active"<?php }else{ ?>class="app-menu__item "<?php } ?>  href="<?php echo site_url('admin/dashboard');?>"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a></li>
 
@@ -168,39 +168,39 @@
          }
       </style>
 
-        <li>
+      <li>
           <?php 
-              if($record_num=='user_transaction_list'){
-                  $user_transaction_list_class= "app-menu__item active";
+              if($record_num=='user_list'){
+                  $user_list_class= "app-menu__item active";
               }else{
-                  $user_transaction_list_class= "app-menu__item";
+                  $user_list_class= "app-menu__item";
               }
            ?>
            
-          <a class="<?= $user_transaction_list_class;?>"  href="<?php echo site_url('admin/user_transaction_list');?>">
+          <a class="<?= $user_list_class;?>"  href="<?php echo site_url('admin/user_list');?>">
            <i class="app-menu__icon fa fa-user-o"></i>
-            <span class="app-menu__label">User Transaction</span>
+            <span class="app-menu__label">User</span>
+         </a>
+      </li> 
+
+        <li>
+          <?php 
+              if($record_num=='transaction_list'){
+                  $transaction_list_class= "app-menu__item active";
+              }else{
+                  $transaction_list_class= "app-menu__item";
+              }
+           ?>
+           
+          <a class="<?= $transaction_list_class;?>"  href="<?php echo site_url('admin/transaction_list');?>">
+           <i class="app-menu__icon fa fa-list"></i>
+            <span class="app-menu__label">Transaction</span>
          </a>
       </li> 
       
-      <!--   <li>
-          <?php 
-              if($record_num=='notification'){
-                  $notification_class= "app-menu__item active";
-              }else{
-                  $notification_class= "app-menu__item";
-              }
-           ?>
-           
-          <a class="<?= $notification_class;?>"  href="<?php echo site_url('admin/notification');?>">
-           <i class="app-menu__icon fa fa-bell fa-fw"></i>
-            <span class="app-menu__label">Notification</span>
-         </a>
-      </li>  -->
-         
 
 
-         <li <?php if($record_num=='about_us' || $record_num=='privacy_policy' || $record_num=='terms_condition' || $record_num=='contactus_list' || $record_num=='change_banner_status') { ?>class="treeview is-expanded" <?php }else{ ?>class="treeview"<?php } ?>>
+        <!--  <li <?php if($record_num=='about_us' || $record_num=='privacy_policy' || $record_num=='terms_condition' || $record_num=='contactus_list' || $record_num=='change_banner_status') { ?>class="treeview is-expanded" <?php }else{ ?>class="treeview"<?php } ?>>
          <a class="app-menu__item" data-toggle="treeview">
             <i class="app-menu__icon fa fa-sitemap"></i>
             <span class="app-menu__label">CMS </span>
@@ -230,15 +230,9 @@
                   Contact Information
                </a>
             </li>
-
-           <!--  <li>
-               <a <?php if($record_num=='change_banner_status'){ ?>class="treeview-item active"<?php }else{ ?>class="treeview-item"<?php } ?> href="<?php echo site_url('admin/cms/change_banner_status');?>">
-                  Change Banner Status
-               </a>
-            </li> -->
             
          </ul>
-      </li> 
+      </li>  -->
    </ul>
 </aside>
 

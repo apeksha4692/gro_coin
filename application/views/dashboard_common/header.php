@@ -119,9 +119,9 @@
                     </a>
                 </li> -->
 
-                <li class="nav-item mr-2">
+                <!-- <li class="nav-item mr-2">
                     <a class="btn connect btn-block buy_Btn nav_item" href="https://pancakeswap.finance/swap" role="button" target="_blank">Buy Now</a>
-                </li>
+                </li> -->
 
                 <li class="nav-item mr-2">
 

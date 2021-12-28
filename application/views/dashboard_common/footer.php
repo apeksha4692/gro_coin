@@ -54,17 +54,6 @@
         // alert(1);
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
       const account = accounts[0];
-
-      // if(accounts != ''){
-      //   showAccount.innerHTML = account;
-
-      //   $('.enableEthereumButton').hide();
-      //   $('.showAccount').show();
-      // }else{
-      //   $('.enableEthereumButton').show();
-      //   $('.showAccount').hide();
-      // }
-
     }
 
 </script>

@@ -20,37 +20,42 @@
                   <thead>
                     <tr>
                      <th>S.No</th>
-                     <!-- <th>Type</th> -->
-                     <!-- <th>Transaction Id</th> -->
+                     <th>Type</th>
+                     <th>Transaction Id</th>
                      <th>Account Number</th>
-                     <th>Token Hold</th>
-                     <!-- <th>Amount</th>
+                     <th>Amount</th>
                      <th>Start Time</th>
-                     <th>Finish Time</th> -->
+                     <th>Finish Time</th>
                     </tr>
                   </thead>
                   <tbody>
                       <?php
                          // print_r($tableData);exit;
                         $i = 1;
-                        foreach ($userList as $key) { 
+                        foreach ($transactionList as $key) { 
                              ?>
                            <tr>
                               <td><?php echo $i; ?></td>
-                              <td><?php echo $key['account_id']; ?></td>
                               <td>
-                                <?php
-                                  if(!empty($key['grol_token'])){
-                                    $grol_token = $key['grol_token']/100000;
-                                    $grolToken = round($grol_token,5);
-                                    echo $grolToken; 
-                                  }else{
-                                    echo 0; 
-                                  }
-                                  
+                                <?php 
+
+                                    if($key['type'] == 'stake'){
+                                      echo "Stake"; 
+                                    }elseif($key['type'] == 'unstake'){
+                                      echo "Unstake"; 
+                                    }elseif($key['type'] == 'buy_token'){
+                                      echo "Buy Token"; 
+                                    }
                                 ?>
-                                
                               </td>
+                              <td>
+                                <a href="https://testnet.bscscan.com/tx/<?php echo $key['transaction_id']; ?>" target="_blank"><?php echo $key['transaction_id']; ?></a>
+                              </td>
+                              <td><?php echo $key['account_id']; ?></td>
+                              <td><?php echo $key['amount']; ?></td>
+                              <td><?php echo $key['start_time']; ?></td>
+                              <td><?php echo $key['finish_time']; ?></td>
+
                            </tr>
                      <?php $i++; } ?>
                   </tbody>

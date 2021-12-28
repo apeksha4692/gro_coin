@@ -54,6 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['dashboard'] 		= 'Welcome/dashboard';
+$route['buy_token'] 		= 'Welcome/buy_token';
 
 $route['staking'] 		= 'StakingUnstakingController/staking';
 $route['unstaking'] 		= 'StakingUnstakingController/unstaking';
@@ -82,4 +83,6 @@ $route['admin/cms/contactus_list'] 			= 	'admin/CmsController/contactus_list';
 $route['admin/cms/contact_information'] 	= 	'admin/CmsController/contact_information';
 $route['admin/cms/update_contact'] 			= 	'admin/CmsController/update_contact';
 
-$route['admin/user_transaction_list'] 			= 	'admin/UserController/user_transaction_list';
+$route['admin/user_list'] 			= 	'admin/UserController/user_list';
+$route['admin/user_token_list'] 	= 	'admin/UserController/user_token_list';
+$route['admin/transaction_list'] 	= 	'admin/UserController/transaction_list';

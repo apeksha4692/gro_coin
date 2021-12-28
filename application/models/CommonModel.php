@@ -270,7 +270,8 @@ class CommonModel extends CI_Model
         
         $this->db->select('users.*,transaction.type,transaction.amount,transaction.transaction_id')
 	        ->from('users')
-	        ->join('transaction','transaction.user_id = users.id','left');
+	        ->join('transaction','transaction.user_id = users.id','left')
+	        ->order_by('transaction.id', "desc");
         return $this->db->get()->result_array(); 
     }
 }
