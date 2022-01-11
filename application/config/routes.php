@@ -86,3 +86,11 @@ $route['admin/cms/update_contact'] 			= 	'admin/CmsController/update_contact';
 $route['admin/user_list'] 			= 	'admin/UserController/user_list';
 $route['admin/user_token_list'] 	= 	'admin/UserController/user_token_list';
 $route['admin/transaction_list'] 	= 	'admin/UserController/transaction_list';
+
+//Api Route
+
+$route['api/decode_jwt'] 		= 'api/AuthController/decode_jwt';
+
+$route['api/signup'] 			= 'api/AuthController/signup';
+$route['api/wallet_balance'] 	= 'api/AuthController/wallet_balance';
+$route['api/transfer_amount'] 	= 'api/AuthController/transfer_amount';

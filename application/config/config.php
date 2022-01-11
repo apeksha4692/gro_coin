@@ -521,3 +521,7 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+//https://dashboard.tatum.io/log-api-calls
+$config['bsc_api_key'] = '6b9a5165-24f8-4f80-bc22-5dd8e37ad49c';
+
